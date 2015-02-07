@@ -1,0 +1,11 @@
+{
+"manifest_version": 2,
+"name": "Visible StackOverflow TopBar",
+"version": "1.0.1",
+"description": "Make the TopBar on StackOverflow always visible.",
+"icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+"permissions": [ "http://www.stackoverflow.com/*", "http://stackoverflow.com/*" ],
+"content_scripts": [ {
+  "matches": ["http://www.stackoverflow.com/*", "http://stackoverflow.com/*"],
+  "css": ["style.css"] } ]
+}
