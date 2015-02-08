@@ -1,11 +1,31 @@
 {
 "manifest_version": 2,
 "name": "Visible StackOverflow TopBar",
-"version": "1.0.1",
+"version": "1.0.3",
 "description": "Make the TopBar on StackOverflow always visible.",
 "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
-"permissions": [ "http://www.stackoverflow.com/*", "http://stackoverflow.com/*" ],
+"permissions": [ 
+  "http://stackoverflow.com/*", "https://stackoverflow.com/*",
+  "http://*.stackoverflow.com/*", "https://*.stackoverflow.com/*",
+  "http://*.stackexchange.com/*", "https://*.stackexchange.com/*",
+  "http://superuser.com/*", "https://superuser.com/*",
+  "http://stackapps.com/*", "https://stackapps.com/*",
+  "http://serverfault.com/*", "https://serverfault.com/*",
+  "http://mathoverflow.net/*", "https://mathoverflow.com/*"
+],
 "content_scripts": [ {
-  "matches": ["http://www.stackoverflow.com/*", "http://stackoverflow.com/*"],
+  "matches": [
+    "http://stackoverflow.com/*", "https://stackoverflow.com/*",
+    "http://*.stackoverflow.com/*", "https://*.stackoverflow.com/*",
+    "http://*.stackexchange.com/*", "https://*.stackexchange.com/*",
+    "http://superuser.com/*", "https://superuser.com/*",
+    "http://stackapps.com/*", "https://stackapps.com/*",
+    "http://serverfault.com/*", "https://serverfault.com/*",
+    "http://mathoverflow.net/*", "https://mathoverflow.com/*"
+  ],
+  "exclude_matches": [
+    "http://careers.stackoverflow.com/*",
+    "https://careers.stackoverflow.com/*"
+  ],
   "css": ["style.css"] } ]
 }

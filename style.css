@@ -1,1 +1,1 @@
-.topbar{position:fixed;z-index:1;}.container{padding-top:35px;}
+.topbar,.new-topbar .topbar{position:fixed;top:0;z-index:3;}.container{padding-top:35px;}
